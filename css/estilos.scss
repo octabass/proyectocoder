@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Medidas
+$wh1: 100%;
+
+// Paleta de Colores
+$color1: #fff;
+$color2: #000;
+$color3: #eb4200;
+$color4: #cfcbcb;
+$color5: #b33401;
+
+// Fuentes
+$font1: 'Montserrat';
+
+// Sizes
+$size1: 18px;
+$size2: 16px;
+$size3: 30px;
+$size4: 22px;
+
+// Weight
+$weight1: 600;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    background-color: $color1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color3;
+    border-radius: 10px;
+}
+
+.col-sm-12 {
+    padding: 0;
+}
+
+/*------------------------
+--------- NAVBAR ---------
+------------------------*/
+
+header {
+    .navbar {
+        background-color: $color2;
+        padding: 0 50px;
+    }
+    
+    .navbar-brand {
+        img {
+            height: 100px;
+        }
+    }
+    
+    .navbar-collapse {
+        justify-content: end;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+        color: $color1;
+        font-family: $font1;
+        font-size: $size1;
+        font-weight: $weight1;
+    }
+    
+    .nav-link{
+        :hover {
+            color: $color4;
+        }
+    }
+    
+    button{
+        i {    
+            color: $color1;
+            padding: 5px 0;
+        }
+    }
+}
+
+/*-------------------------
+---------- INICIO ---------
+-------------------------*/
+
+main video {
+    width: $wh1;
+}
+
+.inicio-perfil {
+    padding: 50px;
+    background-color: $color1;
+    flex-direction: column;
+    text-align: center;
+
+    h2 {
+        color: $color2;
+        font-size: $size3;
+        font-family: $font1;
+        justify-self: center;
+        margin: 0;
+    }
+
+    a {
+        color: $color3;
+    }
+
+    a:hover {
+        color: $color5;
+    }
+}
+
+.inicio-il {
+    padding: 50px 0;
+    background-color: $color2;
+    flex-direction: column;
+    text-align: center;
+
+    h2 {
+        color: $color1;
+        font-size: $size3;
+        font-family: $font1;
+        justify-self: center;
+        margin: 0;
+    }
+
+    a {
+        color: $color3;
+    }
+
+    a:hover {
+        color: $color5;
+    }
+}
+
+.row-carousel {
+    background-color: $color2;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    .carousel-item {
+        width: $wh1;
+        height: 500px;
+        align-content: center;
+
+        img {
+            width: $wh1;
+            height: 500px;
+        }        
+    }
+}
+
+.inicio-in {
+    @extend .inicio-perfil;    
+}
+
+.inicio-in-mul {
+    flex-direction: column;
+    align-items: center;
+
+    video {
+        height: 500px;
+    }
+}
+
+.inicio-contacto {
+    @extend .inicio-perfil;  
+}
+
+/*-------------------------
+--------- PERFIL ----------
+-------------------------*/
+
+.perfil{
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .perfil-texto {
+        width: calc($wh1/2);
+
+        .descripcion {
+            width: 80%;
+            height: auto;
+            background-color: $color2;
+            color: $color1;
+            padding: 20px;
+            font-family: $font1;
+            font-size: $size1;
+            text-align: justify;
+            hyphens: auto;
+            border-radius: 10px;
+            margin: 0 10%;
+    
+            img {
+                width: calc($wh1/2);
+                display: flex;
+                margin: 0;
+            }
+        }
+    }
+
+    .perfil-foto {
+        width: calc($wh1/2);
+
+        img {
+            width: 80%;
+            height: auto;
+            border: 5px solid $color2;
+            border-radius: 10px;
+            margin: 0 10%;
+            }
+    }
+}
+
+/*-------------------------
+------ ILUSTRACIONES ------
+-------------------------*/
+
+.ilustraciones {
+    padding: 50px;
+    width: $wh1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
+    background-color: $color1;
+    background-image: linear-gradient(to-bottom, $color1, $color4);
+
+    img {
+        width: 80%;
+        height: auto;
+        transition: transform 1s;
+    }
+
+    img:hover{
+        transform: scale(1.15)
+    }
+}
+
+/*-------------------------
+------ INDUMENTARIA -------
+-------------------------*/
+
+.indumentaria{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .in-text {
+        width: 40%;
+        background-color: $color2;
+        color: $color1;
+        padding: 20px;
+        font-family: $font1;
+        font-size: $size1;
+        text-align: justify;
+        hyphens: auto;
+        border-radius: 10px;
+        align-self: center;
+    }
+
+    .in-video {
+        display: flex;
+        align-items: center;
+
+        video{
+            height: 500px;
+            border: 5px solid $color2;
+            border-radius: 10px;
+        }
+    }
+}
+
+.indumentaria-fotos{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img{
+        width: 25%;
+        height: auto;
+        border-radius: 10px;
+        border: 5px solid $color2;
+    }
+}
+
+/*---------------------
+------ CONTACTO -------
+---------------------*/
+
+.contacto-texto {
+    padding-top: 50px;
+    background-color: $color1;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+        color: $color2;
+        font-size: $size3;
+        font-weight: $weight1;
+        font-family: $font1;
+        justify-self: center;
+        margin: 0;
+        animation-name: aparecer;
+        animation-delay: .5s;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes aparecer {
+        0% {
+            scale: 1;
+        }
+
+        100% {
+            scale: 1.5;
+        }
+    }
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0;
+
+    input {
+        width: calc($wh1/2);
+        align-self: center;
+        margin: 20px;
+    }
+
+    button{
+        width: 100px;
+        align-self: center;
+    }
+}
+
+.form-control{
+    width: calc($wh1/2);
+    margin: 20px;
+}
+
+/*------------------------
+--------- FOOTER ---------
+------------------------*/
+
+footer {
+    background-color: $color2;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .pages {
+        flex-direction: column;
+        padding: 50px 0;
+
+        a {
+            color: $color1;
+            font-family: $font1;
+            text-decoration: none;
+            font-size: $size1;
+            font-weight: $weight1;
+            padding: 10px;
+        }
+
+        a:hover {
+            color: $color4;
+        }
+    }
+    
+    .redes {
+        @extend .pages;
+    }
+    
+    .ubi {
+        @extend .pages;
+
+        p {
+            color: $color1;
+            font-family: $font1;
+            text-decoration: none;
+            font-size: $size1;
+            font-weight: $weight1;
+            padding: 10px;
+            margin: 0;
+        }
+    }
+}
+
+
+@media (min-width: 320px) and (max-width:500px){
+    .navbar-brand {
+        img {
+            height: 80px;
+        }
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: $color1;
+        font-family: $font1;
+        font-size: $size2;
+        font-weight: $size2;
+    }
+
+    .inicio-perfil {
+        padding: 30px;
+
+        h2 {
+            font-size: $size4;
+        }
+    }
+
+    .inicio-il {
+        padding: 30px;
+
+        h2 {
+            font-size: $size4;
+        }
+    }
+
+    .row-carousel {
+        padding-bottom: 30px;
+
+        .carousel-item {
+            width: $wh1;
+            height: 300px;
+            align-content: center;
+
+            img {
+                width: $wh1;
+                height: 300px;
+            }
+        }
+    }
+
+    .inicio-in {
+        padding: 30px;
+
+        h2 {
+            font-size: $size4;
+        }       
+    }
+
+    .inicio-in-mul {
+        video {
+            height: 300px;
+        }
+    }
+
+    .inicio-contacto {
+        padding: 30px;
+
+        h2 {
+            font-size: $size4;
+        }
+    }
+
+    .perfil {
+        width: $wh1;
+
+        .perfil-texto{
+            width: $wh1;
+            margin-bottom: 20px;
+        }
+
+        .perfil-foto{
+            width: $wh1;
+        }
+    }
+
+    .ilustraciones {
+        width: $wh1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 20px;
+    
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
+    
+    .indumentaria{
+        width: $wh1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+        gap: 20px;
+    
+        .in-text {
+            width: 80%;
+        }
+    
+        .in-video {
+            width: 80%;
+            justify-content: center;
+
+            video {
+                width: $wh1;
+                height: auto;
+            }
+        }
+    }
+
+    .indumentaria-fotos{
+        width: $wh1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+        gap: 20px;
+        border-top: 2px solid $color4;
+    
+        img{
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            border: 5px solid $color2;
+        }
+    }
+
+    footer {
+        background-color: $color2;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .pages {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px 0;
+
+            a {
+                font-size: $size2;
+            }
+        }
+    
+        .redes {
+            flex-direction: row;
+            justify-content: center;
+            padding: 10px 0;
+
+            a {
+                font-size: $size2;
+            }
+        }
+    
+        .ubi {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px 0;
+            
+            a {
+                font-size: $size2;
+            }
+
+            p {
+                font-size: $size2;
+            }
+        }
+    }
+}

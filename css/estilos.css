@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #eb4200;
+  border-radius: 10px;
+}
+
+.col-sm-12 {
+  padding: 0;
+}
+
+/*------------------------
+--------- NAVBAR ---------
+------------------------*/
+header .navbar {
+  background-color: #000;
+  padding: 0 50px;
+}
+header .navbar-brand img {
+  height: 100px;
+}
+header .navbar-collapse {
+  justify-content: end;
+}
+header .navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 600;
+}
+header .nav-link :hover {
+  color: #cfcbcb;
+}
+header button i {
+  color: #fff;
+  padding: 5px 0;
+}
+
+/*-------------------------
+---------- INICIO ---------
+-------------------------*/
+main video {
+  width: 100%;
+}
+
+.inicio-perfil, .inicio-contacto, .inicio-in {
+  padding: 50px;
+  background-color: #fff;
+  flex-direction: column;
+  text-align: center;
+}
+.inicio-perfil h2, .inicio-contacto h2, .inicio-in h2 {
+  color: #000;
+  font-size: 30px;
+  font-family: "Montserrat";
+  justify-self: center;
+  margin: 0;
+}
+.inicio-perfil a, .inicio-contacto a, .inicio-in a {
+  color: #eb4200;
+}
+.inicio-perfil a:hover, .inicio-contacto a:hover, .inicio-in a:hover {
+  color: #b33401;
+}
+
+.inicio-il {
+  padding: 50px 0;
+  background-color: #000;
+  flex-direction: column;
+  text-align: center;
+}
+.inicio-il h2 {
+  color: #fff;
+  font-size: 30px;
+  font-family: "Montserrat";
+  justify-self: center;
+  margin: 0;
+}
+.inicio-il a {
+  color: #eb4200;
+}
+.inicio-il a:hover {
+  color: #b33401;
+}
+
+.row-carousel {
+  background-color: #000;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.row-carousel .carousel-item {
+  width: 100%;
+  height: 500px;
+  align-content: center;
+}
+.row-carousel .carousel-item img {
+  width: 100%;
+  height: 500px;
+}
+
+.inicio-in-mul {
+  flex-direction: column;
+  align-items: center;
+}
+.inicio-in-mul video {
+  height: 500px;
+}
+
+/*-------------------------
+--------- PERFIL ----------
+-------------------------*/
+.perfil {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.perfil .perfil-texto {
+  width: 50%;
+}
+.perfil .perfil-texto .descripcion {
+  width: 80%;
+  height: auto;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  border-radius: 10px;
+  margin: 0 10%;
+}
+.perfil .perfil-texto .descripcion img {
+  width: 50%;
+  display: flex;
+  margin: 0;
+}
+.perfil .perfil-foto {
+  width: 50%;
+}
+.perfil .perfil-foto img {
+  width: 80%;
+  height: auto;
+  border: 5px solid #000;
+  border-radius: 10px;
+  margin: 0 10%;
+}
+
+/*-------------------------
+------ ILUSTRACIONES ------
+-------------------------*/
+.ilustraciones {
+  padding: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+  background-color: #fff;
+  background-image: linear-gradient(to-bottom, #fff, #cfcbcb);
+}
+.ilustraciones img {
+  width: 80%;
+  height: auto;
+  transition: transform 1s;
+}
+.ilustraciones img:hover {
+  transform: scale(1.15);
+}
+
+/*-------------------------
+------ INDUMENTARIA -------
+-------------------------*/
+.indumentaria {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.indumentaria .in-text {
+  width: 40%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  border-radius: 10px;
+  align-self: center;
+}
+.indumentaria .in-video {
+  display: flex;
+  align-items: center;
+}
+.indumentaria .in-video video {
+  height: 500px;
+  border: 5px solid #000;
+  border-radius: 10px;
+}
+
+.indumentaria-fotos {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.indumentaria-fotos img {
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  border: 5px solid #000;
+}
+
+/*---------------------
+------ CONTACTO -------
+---------------------*/
+.contacto-texto {
+  padding-top: 50px;
+  background-color: #fff;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.contacto-texto h2 {
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  justify-self: center;
+  margin: 0;
+  animation-name: aparecer;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes aparecer {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.5;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 0;
+}
+.form-row input {
+  width: 50%;
+  align-self: center;
+  margin: 20px;
+}
+.form-row button {
+  width: 100px;
+  align-self: center;
+}
+
+.form-control {
+  width: 50%;
+  margin: 20px;
+}
+
+/*------------------------
+--------- FOOTER ---------
+------------------------*/
+footer {
+  background-color: #000;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer .pages, footer .ubi, footer .redes {
+  flex-direction: column;
+  padding: 50px 0;
+}
+footer .pages a, footer .ubi a, footer .redes a {
+  color: #fff;
+  font-family: "Montserrat";
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+}
+footer .pages a:hover, footer .ubi a:hover, footer .redes a:hover {
+  color: #cfcbcb;
+}
+footer .ubi p {
+  color: #fff;
+  font-family: "Montserrat";
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .navbar-brand img {
+    height: 80px;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 16px;
+  }
+  .inicio-perfil, .inicio-in, .inicio-contacto {
+    padding: 30px;
+  }
+  .inicio-perfil h2, .inicio-in h2, .inicio-contacto h2 {
+    font-size: 22px;
+  }
+  .inicio-il {
+    padding: 30px;
+  }
+  .inicio-il h2 {
+    font-size: 22px;
+  }
+  .row-carousel {
+    padding-bottom: 30px;
+  }
+  .row-carousel .carousel-item {
+    width: 100%;
+    height: 300px;
+    align-content: center;
+  }
+  .row-carousel .carousel-item img {
+    width: 100%;
+    height: 300px;
+  }
+  .inicio-in {
+    padding: 30px;
+  }
+  .inicio-in h2 {
+    font-size: 22px;
+  }
+  .inicio-in-mul video {
+    height: 300px;
+  }
+  .inicio-contacto {
+    padding: 30px;
+  }
+  .inicio-contacto h2 {
+    font-size: 22px;
+  }
+  .perfil {
+    width: 100%;
+  }
+  .perfil .perfil-texto {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .perfil .perfil-foto {
+    width: 100%;
+  }
+  .ilustraciones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+  }
+  .ilustraciones img {
+    width: 80%;
+    height: auto;
+  }
+  .indumentaria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .indumentaria .in-text {
+    width: 80%;
+  }
+  .indumentaria .in-video {
+    width: 80%;
+    justify-content: center;
+  }
+  .indumentaria .in-video video {
+    width: 100%;
+    height: auto;
+  }
+  .indumentaria-fotos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-top: 2px solid #cfcbcb;
+  }
+  .indumentaria-fotos img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #000;
+  }
+  footer {
+    background-color: #000;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  footer .pages, footer .redes, footer .ubi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  footer .pages a, footer .redes a, footer .ubi a {
+    font-size: 16px;
+  }
+  footer .redes {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  footer .redes a {
+    font-size: 16px;
+  }
+  footer .ubi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  footer .ubi a {
+    font-size: 16px;
+  }
+  footer .ubi p {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=estilos.css.map */
