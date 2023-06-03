@@ -38,7 +38,7 @@ header .navbar-dark .navbar-nav .nav-link {
   font-weight: 600;
 }
 header .nav-link :hover {
-  color: #cfcbcb;
+  color: #b9b6b6;
 }
 header button i {
   color: #fff;
@@ -63,6 +63,7 @@ main video {
   font-size: 30px;
   font-family: "Montserrat";
   justify-self: center;
+  text-shadow: 2px 2px 2px #b9b6b6;
   margin: 0;
 }
 .inicio-perfil a, .inicio-contacto a, .inicio-in a {
@@ -113,6 +114,9 @@ main video {
 }
 .inicio-in-mul video {
   height: 500px;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 2px 2px 5px #eb4200;
 }
 
 /*-------------------------
@@ -139,11 +143,27 @@ main video {
           hyphens: auto;
   border-radius: 10px;
   margin: 0 10%;
+  box-shadow: 2px 2px 5px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .perfil .perfil-texto .descripcion img {
   width: 50%;
-  display: flex;
-  margin: 0;
+  animation-name: aparecer;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes aparecer {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
 }
 .perfil .perfil-foto {
   width: 50%;
@@ -151,32 +171,17 @@ main video {
 .perfil .perfil-foto img {
   width: 80%;
   height: auto;
-  border: 5px solid #000;
+  border: 4px solid #000;
   border-radius: 10px;
   margin: 0 10%;
+  box-shadow: 2px 2px 5px #000;
 }
 
 /*-------------------------
 ------ ILUSTRACIONES ------
 -------------------------*/
-.ilustraciones {
-  padding: 50px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  justify-items: center;
-  grid-gap: 20px;
-  background-color: #fff;
-  background-image: linear-gradient(to-bottom, #fff, #cfcbcb);
-}
 .ilustraciones img {
-  width: 80%;
-  height: auto;
-  transition: transform 1s;
-}
-.ilustraciones img:hover {
-  transform: scale(1.15);
+  box-shadow: 5px 5px 5px #000;
 }
 
 /*-------------------------
@@ -187,9 +192,10 @@ main video {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .indumentaria .in-text {
-  width: 40%;
+  width: 45%;
   background-color: #000;
   color: #fff;
   padding: 20px;
@@ -200,6 +206,7 @@ main video {
           hyphens: auto;
   border-radius: 10px;
   align-self: center;
+  box-shadow: 2px 2px 5px #000;
 }
 .indumentaria .in-video {
   display: flex;
@@ -207,21 +214,15 @@ main video {
 }
 .indumentaria .in-video video {
   height: 500px;
-  border: 5px solid #000;
+  border: 4px solid #000;
   border-radius: 10px;
+  box-shadow: 2px 2px 5px #000;
+  margin-top: 50px;
 }
 
-.indumentaria-fotos {
-  padding: 50px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
 .indumentaria-fotos img {
-  width: 25%;
-  height: auto;
-  border-radius: 10px;
-  border: 5px solid #000;
+  border: 4px solid #000;
+  box-shadow: 2px 2px 5px #000;
 }
 
 /*---------------------
@@ -240,6 +241,7 @@ main video {
   font-size: 30px;
   font-weight: 600;
   font-family: "Montserrat";
+  text-shadow: 2px 2px 2px #b9b6b6;
   justify-self: center;
   margin: 0;
   animation-name: aparecer;
@@ -253,7 +255,7 @@ main video {
     scale: 1;
   }
   100% {
-    scale: 1.5;
+    scale: 1.2;
   }
 }
 
@@ -301,7 +303,7 @@ footer .pages a, footer .ubi a, footer .redes a {
   padding: 10px;
 }
 footer .pages a:hover, footer .ubi a:hover, footer .redes a:hover {
-  color: #cfcbcb;
+  color: #b9b6b6;
 }
 footer .ubi p {
   color: #fff;
@@ -372,18 +374,6 @@ footer .ubi p {
   .perfil .perfil-foto {
     width: 100%;
   }
-  .ilustraciones {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 20px;
-  }
-  .ilustraciones img {
-    width: 80%;
-    height: auto;
-  }
   .indumentaria {
     width: 100%;
     display: flex;
@@ -391,6 +381,7 @@ footer .ubi p {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border-bottom: 2px solid #b9b6b6;
   }
   .indumentaria .in-text {
     width: 80%;
@@ -402,21 +393,6 @@ footer .ubi p {
   .indumentaria .in-video video {
     width: 100%;
     height: auto;
-  }
-  .indumentaria-fotos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    border-top: 2px solid #cfcbcb;
-  }
-  .indumentaria-fotos img {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-    border: 5px solid #000;
   }
   footer {
     background-color: #000;

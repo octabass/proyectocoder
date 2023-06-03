@@ -7,7 +7,7 @@ $wh1: 100%;
 $color1: #fff;
 $color2: #000;
 $color3: #eb4200;
-$color4: #cfcbcb;
+$color4: #b9b6b6;
 $color5: #b33401;
 
 // Fuentes
@@ -102,6 +102,7 @@ main video {
         font-size: $size3;
         font-family: $font1;
         justify-self: center;
+        text-shadow: 2px 2px 2px $color4;
         margin: 0;
     }
 
@@ -164,6 +165,9 @@ main video {
 
     video {
         height: 500px;
+        border-radius: 5px;
+        margin: 5px;
+        box-shadow: 2px 2px 5px $color3
     }
 }
 
@@ -182,7 +186,7 @@ main video {
 
     .perfil-texto {
         width: calc($wh1/2);
-
+        
         .descripcion {
             width: 80%;
             height: auto;
@@ -195,11 +199,29 @@ main video {
             hyphens: auto;
             border-radius: 10px;
             margin: 0 10%;
-    
+            box-shadow: 2px 2px 5px $color2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
             img {
                 width: calc($wh1/2);
-                display: flex;
-                margin: 0;
+                animation-name: aparecer;
+                animation-delay: .5s;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes aparecer {
+                0% {
+                    scale: 1;
+                }
+
+                100% {
+                    scale: 1.1;
+                }
             }
         }
     }
@@ -210,10 +232,11 @@ main video {
         img {
             width: 80%;
             height: auto;
-            border: 5px solid $color2;
+            border: 4px solid $color2;
             border-radius: 10px;
             margin: 0 10%;
-            }
+            box-shadow: 2px 2px 5px $color2
+        }
     }
 }
 
@@ -222,24 +245,8 @@ main video {
 -------------------------*/
 
 .ilustraciones {
-    padding: 50px;
-    width: $wh1;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    justify-items: center;
-    grid-gap: 20px;
-    background-color: $color1;
-    background-image: linear-gradient(to-bottom, $color1, $color4);
-
     img {
-        width: 80%;
-        height: auto;
-        transition: transform 1s;
-    }
-
-    img:hover{
-        transform: scale(1.15)
+        box-shadow: 5px 5px 5px $color2;
     }
 }
 
@@ -252,9 +259,10 @@ main video {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
     .in-text {
-        width: 40%;
+        width: 45%;
         background-color: $color2;
         color: $color1;
         padding: 20px;
@@ -264,6 +272,7 @@ main video {
         hyphens: auto;
         border-radius: 10px;
         align-self: center;
+        box-shadow: 2px 2px 5px $color2;
     }
 
     .in-video {
@@ -272,23 +281,18 @@ main video {
 
         video{
             height: 500px;
-            border: 5px solid $color2;
+            border: 4px solid $color2;
             border-radius: 10px;
+            box-shadow: 2px 2px 5px $color2;
+            margin-top: 50px;
         }
     }
 }
 
 .indumentaria-fotos{
-    padding: 50px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
     img{
-        width: 25%;
-        height: auto;
-        border-radius: 10px;
-        border: 5px solid $color2;
+        border: 4px solid $color2;
+        box-shadow: 2px 2px 5px $color2;
     }
 }
 
@@ -309,6 +313,7 @@ main video {
         font-size: $size3;
         font-weight: $weight1;
         font-family: $font1;
+        text-shadow: 2px 2px 2px $color4;
         justify-self: center;
         margin: 0;
         animation-name: aparecer;
@@ -324,7 +329,7 @@ main video {
         }
 
         100% {
-            scale: 1.5;
+            scale: 1.2;
         }
     }
 }
@@ -480,20 +485,6 @@ footer {
             width: $wh1;
         }
     }
-
-    .ilustraciones {
-        width: $wh1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        grid-gap: 20px;
-    
-        img {
-            width: 80%;
-            height: auto;
-        }
-    }
     
     .indumentaria{
         width: $wh1;
@@ -502,6 +493,7 @@ footer {
         justify-content: center;
         align-items: center;        
         gap: 20px;
+        border-bottom: 2px solid $color4;
     
         .in-text {
             width: 80%;
@@ -515,23 +507,6 @@ footer {
                 width: $wh1;
                 height: auto;
             }
-        }
-    }
-
-    .indumentaria-fotos{
-        width: $wh1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;        
-        gap: 20px;
-        border-top: 2px solid $color4;
-    
-        img{
-            width: 80%;
-            height: auto;
-            border-radius: 10px;
-            border: 5px solid $color2;
         }
     }
 
